@@ -11,6 +11,7 @@ public class UserServiceImpl implements UserService {
     List<User> users;
 
     public UserServiceImpl() {
+
         this.users = new ArrayList<User>();
     }
 
