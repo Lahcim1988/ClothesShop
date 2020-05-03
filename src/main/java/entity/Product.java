@@ -18,14 +18,6 @@ public class Product {
         this.productCount = productCount;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public void setProductCount(int productCount) {
-        this.productCount = productCount;
-    }
-
     public int getId() {
         return id;
     }
@@ -38,6 +30,10 @@ public class Product {
         return price;
     }
 
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
     public String getWeight() {
         return weight;
     }
@@ -48,6 +44,10 @@ public class Product {
 
     public int getProductCount() {
         return productCount;
+    }
+
+    public void setProductCount(int productCount) {
+        this.productCount = productCount;
     }
 
     @Override
