@@ -2,14 +2,16 @@ package entity;
 
 public class Product {
 
-    private long id;
-    private String productName;
-    private double price;
-    private float weight;
-    private String color;
-    private int productCount;
+    public final static String PRODUCT_SEPARATOR = "#";
 
-    public Product(long id, String productName, double price, float weight, String color, int productCount) {
+    private Long id;
+    private String productName;
+    private Double price;
+    private Float weight;
+    private String color;
+    private Integer productCount;
+
+    public Product(Long id, String productName, Double price, Float weight, String color, Integer productCount) {
         this.id = id;
         this.productName = productName;
         this.price = price;
@@ -18,7 +20,7 @@ public class Product {
         this.productCount = productCount;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -26,15 +28,11 @@ public class Product {
         return productName;
     }
 
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public float getWeight() {
+    public Float getWeight() {
         return weight;
     }
 
@@ -42,23 +40,17 @@ public class Product {
         return color;
     }
 
-    public int getProductCount() {
+    public Integer getProductCount() {
         return productCount;
-    }
-
-    public void setProductCount(int productCount) {
-        this.productCount = productCount;
     }
 
     @Override
     public String toString() {
-        return "pl.shop.entity.Product{" +
-                "id=" + id +
-                ", productName='" + productName + '\'' +
-                ", price=" + price +
-                ", weight='" + weight + '\'' +
-                ", color='" + color + '\'' +
-                ", productCount=" + productCount +
-                '}';
+        return id + PRODUCT_SEPARATOR +
+                productName + PRODUCT_SEPARATOR +
+                price + PRODUCT_SEPARATOR +
+                weight + PRODUCT_SEPARATOR +
+                color + PRODUCT_SEPARATOR +
+                productCount;
     }
 }

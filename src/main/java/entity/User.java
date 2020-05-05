@@ -2,17 +2,19 @@ package entity;
 
 public class User {
 
-    private long id;
+    public final static String USER_SEPARATOR = "#";
+
+    private Long id;
     private String login;
     private String password;
 
-    public User(long id, String login, String password) {
+    public User(Long id, String login, String password) {
         this.id = id;
         this.login = login;
         this.password = password;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -26,10 +28,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "pl.shop.entity.User{" +
-                "id=" + id +
-                ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+        return id + USER_SEPARATOR + login + USER_SEPARATOR + password;
     }
 }
