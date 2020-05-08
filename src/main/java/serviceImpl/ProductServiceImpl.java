@@ -24,7 +24,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public int getCountProducts() {
+    public Integer getCountProducts() {
         return products.size();
     }
 
@@ -62,9 +62,9 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public boolean isProductExist(long productId) {
+    public boolean isProductExist(Long productId) {
         for (Product product : products) {
-            boolean isEqual = product.getId() == productId;
+            boolean isEqual = product.getId().equals(productId);
             if (isEqual) {
                 return true;
             }

@@ -8,7 +8,7 @@ public interface ProductService {
 
     List<Product> getAllProducts();
 
-    int getCountProducts();
+    Integer getCountProducts();
 
     Product getProductByProductName(String productName);
 
@@ -16,6 +16,6 @@ public interface ProductService {
 
     boolean isProductExist(String productName);
 
-    boolean isProductExist(long productId);
+    boolean isProductExist(Long productId);
 
 }
