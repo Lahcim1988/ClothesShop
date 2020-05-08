@@ -14,10 +14,14 @@ public class ProductDaoImpl implements ProductDao {
     private final String fileName;
     private final String productType;
 
-    public ProductDaoImpl(String fileName, String productType) throws IOException {
+    public ProductDaoImpl(String fileName, String productType) {
         this.fileName = fileName;
         this.productType = productType;
-        FileUtils.createNewFile(fileName);
+        try {
+            FileUtils.createNewFile(fileName);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -69,7 +73,7 @@ public class ProductDaoImpl implements ProductDao {
         String readLine = reader.readLine();
         while (readLine != null) {
             Product product = ProductParser.stringToProduct(readLine, productType);
-            if(product != null){
+            if (product != null) {
                 products.add(product);
             }
         }
