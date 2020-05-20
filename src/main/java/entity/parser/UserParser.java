@@ -1,4 +1,6 @@
-package entity;
+package entity.parser;
+
+import entity.User;
 
 public class UserParser {
 
