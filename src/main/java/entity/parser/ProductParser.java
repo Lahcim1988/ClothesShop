@@ -3,21 +3,22 @@ package entity.parser;
 import entity.Boots;
 import entity.Cloth;
 import entity.Product;
+import enums.ProductSeparators;
 
 public class ProductParser {
 
     public static Product stringToProduct(String productStr) {
-        final char productType = productStr.charAt(0);
+        final ProductSeparators productType = ProductSeparators.getIdByChar(productStr.substring(0,1));
 
         switch (productType) {
 
-            case Product.PRODUCT_TYPE:
+            case PRODUCT_ID:
                 return convertToProduct(productStr);
 
-            case Cloth.PRODUCT_TYPE:
+            case ClOTH_ID:
                 return convertToCloth(productStr);
 
-            case Boots.PRODUCT_TYPE:
+            case BOOTS_ID:
                 return convertToBoots(productStr);
         }
 
@@ -25,7 +26,7 @@ public class ProductParser {
     }
 
     private static Boots convertToBoots(String productStr) {
-        String [] productInformations = productStr.split(Product.PRODUCT_SEPARATOR);
+        String [] productInformations = productStr.split(ProductSeparators.PRODUCT_SEPARATOR.toString());
 
         Long id = Long.parseLong(productInformations[1]);
         String productName = productInformations[2];
@@ -40,7 +41,7 @@ public class ProductParser {
     }
 
     private static Cloth convertToCloth(String productStr) {
-        String [] productInformations = productStr.split(Product.PRODUCT_SEPARATOR);
+        String [] productInformations = productStr.split(ProductSeparators.PRODUCT_SEPARATOR.toString());
 
         Long id = Long.parseLong(productInformations[1]);
         String productName = productInformations[2];
@@ -55,7 +56,7 @@ public class ProductParser {
     }
 
     private static Product convertToProduct(String productStr) {
-        String [] productInformations = productStr.split(Product.PRODUCT_SEPARATOR);
+        String [] productInformations = productStr.split(ProductSeparators.PRODUCT_SEPARATOR.toString());
 
         Long id = Long.parseLong(productInformations[1]);
         String productName = productInformations[2];

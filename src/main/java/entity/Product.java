@@ -1,18 +1,21 @@
 package entity;
 
+import enums.ColorEnum;
+import enums.ProductSeparators;
+
 public class Product {
 
-    public final static String PRODUCT_SEPARATOR = "#";
-    public final static char PRODUCT_TYPE = 'P';
+/*    public final static String PRODUCT_SEPARATOR = "#";
+    public final static char PRODUCT_TYPE = 'P';*/
 
     private Long id;
     private String productName;
     private Float price;
     private Float weight;
-    private String color;
+    private ColorEnum color;
     private Integer productCount;
 
-    public Product(Long id, String productName, Float price, Float weight, String color, Integer productCount) {
+    public Product(Long id, String productName, Float price, Float weight, ColorEnum color, Integer productCount) {
         this.id = id;
         this.productName = productName;
         this.price = price;
@@ -37,7 +40,7 @@ public class Product {
         return weight;
     }
 
-    public String getColor() {
+    public ColorEnum getColor() {
         return color;
     }
 
@@ -46,20 +49,20 @@ public class Product {
     }
 
     protected String getBasicProductString() {
-        return id + PRODUCT_SEPARATOR + productName +
-                PRODUCT_SEPARATOR + price +
-                PRODUCT_SEPARATOR + weight +
-                PRODUCT_SEPARATOR + color +
-                PRODUCT_SEPARATOR + productCount;
+        return id + ProductSeparators.PRODUCT_SEPARATOR.toString() + productName +
+                ProductSeparators.PRODUCT_SEPARATOR.toString() +
+                ProductSeparators.PRODUCT_SEPARATOR.toString() +
+                ProductSeparators.PRODUCT_SEPARATOR.toString() +
+                ProductSeparators.PRODUCT_SEPARATOR.toString();
     }
 
     @Override
     public String toString() {
-        return id + PRODUCT_SEPARATOR +
-                productName + PRODUCT_SEPARATOR +
-                price + PRODUCT_SEPARATOR +
-                weight + PRODUCT_SEPARATOR +
-                color + PRODUCT_SEPARATOR +
+        return id + ProductSeparators.PRODUCT_SEPARATOR.toString() +
+                productName + ProductSeparators.PRODUCT_SEPARATOR.toString() +
+                price + ProductSeparators.PRODUCT_SEPARATOR.toString() +
+                weight + ProductSeparators.PRODUCT_SEPARATOR.toString() +
+                color + ProductSeparators.PRODUCT_SEPARATOR.toString() +
                 productCount;
     }
 }
