@@ -1,6 +1,6 @@
 package enums;
 
-public enum  MaterialEnum {
+public enum Material {
 
     LEATHER,
     FUR,

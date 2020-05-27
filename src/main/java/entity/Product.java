@@ -1,6 +1,6 @@
 package entity;
 
-import enums.ColorEnum;
+import enums.Color;
 import enums.ProductSeparators;
 
 public class Product {
@@ -12,10 +12,10 @@ public class Product {
     private String productName;
     private Float price;
     private Float weight;
-    private ColorEnum color;
+    private Color color;
     private Integer productCount;
 
-    public Product(Long id, String productName, Float price, Float weight, ColorEnum color, Integer productCount) {
+    public Product(Long id, String productName, Float price, Float weight, Color color, Integer productCount) {
         this.id = id;
         this.productName = productName;
         this.price = price;
@@ -40,7 +40,7 @@ public class Product {
         return weight;
     }
 
-    public ColorEnum getColor() {
+    public Color getColor() {
         return color;
     }
 

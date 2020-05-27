@@ -1,6 +1,6 @@
 package enums;
 
-public enum  ProductEnum {
+public enum Product {
 
     PRODUCT_TYPE('P'),
     PRODUCT_SEPARATOR("#");
@@ -8,11 +8,11 @@ public enum  ProductEnum {
     private char product_type;
     private String product_separator;
 
-    ProductEnum(char product_enum) {
+    Product(char product_enum) {
         this.product_type = product_enum;
     }
 
-    ProductEnum(String product_separator) {
+    Product(String product_separator) {
         this.product_separator = product_separator;
     }
 

@@ -1,6 +1,6 @@
 package enums;
 
-public enum  ColorEnum {
+public enum Color {
 
     BLACK("#000000"),
     WHITE("#FFFFFF"),
@@ -11,7 +11,7 @@ public enum  ColorEnum {
 
     private String hex;
 
-    ColorEnum(String hex) {
+    Color(String hex) {
         this.hex = hex;
     }
 
