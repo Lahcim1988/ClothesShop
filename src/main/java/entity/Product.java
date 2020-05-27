@@ -24,6 +24,14 @@ public class Product {
         this.productCount = productCount;
     }
 
+    public void setPrice(Float price) {
+        this.price = price;
+    }
+
+    public void setProductCount(Integer productCount) {
+        this.productCount = productCount;
+    }
+
     public Long getId() {
         return id;
     }
@@ -49,20 +57,11 @@ public class Product {
     }
 
     protected String getBasicProductString() {
-        return id + ProductSeparators.PRODUCT_SEPARATOR.toString() + productName +
-                ProductSeparators.PRODUCT_SEPARATOR.toString() +
-                ProductSeparators.PRODUCT_SEPARATOR.toString() +
-                ProductSeparators.PRODUCT_SEPARATOR.toString() +
-                ProductSeparators.PRODUCT_SEPARATOR.toString();
+        return id + ProductSeparators.PRODUCT_SEPARATOR.toString() + productName + ProductSeparators.PRODUCT_SEPARATOR.toString() + price + ProductSeparators.PRODUCT_SEPARATOR.toString() + weight + ProductSeparators.PRODUCT_SEPARATOR.toString() + color + ProductSeparators.PRODUCT_SEPARATOR.toString() + productCount;
     }
 
     @Override
     public String toString() {
-        return id + ProductSeparators.PRODUCT_SEPARATOR.toString() +
-                productName + ProductSeparators.PRODUCT_SEPARATOR.toString() +
-                price + ProductSeparators.PRODUCT_SEPARATOR.toString() +
-                weight + ProductSeparators.PRODUCT_SEPARATOR.toString() +
-                color + ProductSeparators.PRODUCT_SEPARATOR.toString() +
-                productCount;
+        return ProductSeparators.PRODUCT_ID + ProductSeparators.PRODUCT_SEPARATOR.toString() + getBasicProductString();
     }
 }

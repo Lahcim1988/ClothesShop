@@ -4,21 +4,21 @@ import java.awt.*;
 
 public class ColorParser {
 
-    public static Color parseStrToColor(String str) {
+    public static enums.Color parseStrToColor(String str) {
         String color = str.toUpperCase();
         if (color.equals("RED")) {
-            return Color.RED;
+            return enums.Color.RED;
         } else if (color.equals("BLUE")) {
-            return Color.BLUE;
+            return enums.Color.BLUE;
         } else if (color.equals("BLACK")) {
-            return Color.BLACK;
+            return enums.Color.BLACK;
         } else if (color.equals("YELLOW")) {
-            return Color.YELLOW;
+            return enums.Color.YELLOW;
         } else if (color.equals("GREEN")) {
-            return Color.GREEN;
+            return enums.Color.GREEN;
         } else if (color.equals("WHITE")) {
-            return Color.WHITE;
+            return enums.Color.WHITE;
         }
-        return Color.WHITE;
+        return enums.Color.WHITE;
     }
 }
